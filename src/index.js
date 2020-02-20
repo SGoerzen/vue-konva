@@ -1,6 +1,8 @@
 import Stage from './components/Stage';
 import KonvaNode from './components/KonvaNode';
 import { componentPrefix } from './utils';
+import Vue from "vue";
+
 
 if (typeof window !== 'undefined' && !window.Konva) {
   require('konva');
@@ -55,6 +57,9 @@ const VueKonva = {
 
 export default VueKonva;
 
+
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VueKonva);
+} else {
+  Vue.use(VueKonva);
 }

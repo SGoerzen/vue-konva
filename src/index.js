@@ -58,7 +58,7 @@ const VueKonva = {
 export default VueKonva;
 
 
-if (typeof window !== 'undefined' && window.Vue) {
+if (window && typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VueKonva);
 } else {
   Vue.use(VueKonva);
